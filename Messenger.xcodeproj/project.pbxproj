@@ -22,6 +22,7 @@
 		F79E71C8256CD8B9005EF62B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E71C7256CD8B9005EF62B /* ProfileViewController.swift */; };
 		F79E71CD256CD8D8005EF62B /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E71CC256CD8D8005EF62B /* PhotoViewerViewController.swift */; };
 		F79E71D5256CD8F8005EF62B /* VideoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E71D4256CD8F8005EF62B /* VideoViewerViewController.swift */; };
+		F79E71EC256CE129005EF62B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E71EB256CE129005EF62B /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F79E71C7256CD8B9005EF62B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F79E71CC256CD8D8005EF62B /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		F79E71D4256CD8F8005EF62B /* VideoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerViewController.swift; sourceTree = "<group>"; };
+		F79E71EB256CE129005EF62B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F79E7176256CC818005EF62B /* ConversationsViewController.swift */,
-				F79E71B5256CCA29005EF62B /* LoginViewController.swift */,
-				F79E71BD256CCA3A005EF62B /* RegisterViewController.swift */,
+				F79E71DF256CDA40005EF62B /* Login */,
 				F79E71CC256CD8D8005EF62B /* PhotoViewerViewController.swift */,
 				F79E71D4256CD8F8005EF62B /* VideoViewerViewController.swift */,
 				F79E71C2256CD8A6005EF62B /* NewConversationViewController.swift */,
@@ -193,8 +194,18 @@
 			children = (
 				F79E7178256CC818005EF62B /* Main.storyboard */,
 				F79E7180256CC81B005EF62B /* LaunchScreen.storyboard */,
+				F79E71EB256CE129005EF62B /* Login.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F79E71DF256CDA40005EF62B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F79E71B5256CCA29005EF62B /* LoginViewController.swift */,
+				F79E71BD256CCA3A005EF62B /* RegisterViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79E71EC256CE129005EF62B /* Login.storyboard in Resources */,
 				F79E7182256CC81B005EF62B /* LaunchScreen.storyboard in Resources */,
 				F79E717F256CC81B005EF62B /* Assets.xcassets in Resources */,
 				F79E717A256CC818005EF62B /* Main.storyboard in Resources */,
