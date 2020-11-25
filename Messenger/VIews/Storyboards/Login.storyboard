@@ -28,10 +28,10 @@
                                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVY-N7-diO">
-                                                <rect key="frame" x="34.5" y="178" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="178" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="tnp-jq-ned"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tnp-jq-ned"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="continue"/>
@@ -45,10 +45,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBj-xV-Ryn">
-                                                <rect key="frame" x="34.5" y="240" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="228" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="Pfb-S9-YQo"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Pfb-S9-YQo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
@@ -62,10 +62,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-lQ-Ayj">
-                                                <rect key="frame" x="34.5" y="302" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="278" width="345" height="40"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="mB2-tc-kNn"/>
+                                                    <constraint firstAttribute="height" constant="40" id="mB2-tc-kNn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,11 +80,16 @@
                                                     <action selector="loginButtonTapped:" destination="g6Z-Mx-bxu" eventType="touchUpInside" id="zM5-DB-CRu"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk1-wM-1Qh" customClass="FBSDKLoginButton">
+                                                <rect key="frame" x="34.5" y="328" width="345" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="lmG-9P-IiQ" firstAttribute="width" secondItem="Ga6-nf-EIZ" secondAttribute="width" multiplier="1:3" id="6HM-6d-xGi"/>
                                             <constraint firstItem="lmG-9P-IiQ" firstAttribute="height" secondItem="Ga6-nf-EIZ" secondAttribute="width" multiplier="1:3" id="799-Sr-pgG"/>
+                                            <constraint firstItem="Wk1-wM-1Qh" firstAttribute="width" secondItem="Ga6-nf-EIZ" secondAttribute="width" multiplier="1:1.2" id="BH9-MM-eBx"/>
                                             <constraint firstItem="VBj-xV-Ryn" firstAttribute="width" secondItem="Ga6-nf-EIZ" secondAttribute="width" multiplier="1:1.2" id="EMp-OJ-Fb4"/>
                                             <constraint firstItem="VBj-xV-Ryn" firstAttribute="top" secondItem="jVY-N7-diO" secondAttribute="bottom" constant="10" id="F4j-w3-UtW"/>
                                             <constraint firstItem="g2h-lQ-Ayj" firstAttribute="centerX" secondItem="Ga6-nf-EIZ" secondAttribute="centerX" id="Fiu-0A-Xsq"/>
@@ -93,7 +98,9 @@
                                             <constraint firstItem="lmG-9P-IiQ" firstAttribute="top" secondItem="Ga6-nf-EIZ" secondAttribute="top" constant="20" id="Owx-gB-ivT"/>
                                             <constraint firstItem="lmG-9P-IiQ" firstAttribute="centerX" secondItem="Ga6-nf-EIZ" secondAttribute="centerX" id="QEb-cS-mDy"/>
                                             <constraint firstItem="jVY-N7-diO" firstAttribute="centerX" secondItem="Ga6-nf-EIZ" secondAttribute="centerX" id="QnV-EJ-px6"/>
+                                            <constraint firstItem="Wk1-wM-1Qh" firstAttribute="top" secondItem="g2h-lQ-Ayj" secondAttribute="bottom" constant="10" id="VuD-ba-OvM"/>
                                             <constraint firstItem="g2h-lQ-Ayj" firstAttribute="top" secondItem="VBj-xV-Ryn" secondAttribute="bottom" constant="10" id="gSX-FK-FkZ"/>
+                                            <constraint firstItem="Wk1-wM-1Qh" firstAttribute="centerX" secondItem="Ga6-nf-EIZ" secondAttribute="centerX" id="hd8-5J-cYC"/>
                                             <constraint firstItem="VBj-xV-Ryn" firstAttribute="centerX" secondItem="Ga6-nf-EIZ" secondAttribute="centerX" id="pC0-zA-ocq"/>
                                             <constraint firstItem="g2h-lQ-Ayj" firstAttribute="width" secondItem="Ga6-nf-EIZ" secondAttribute="width" multiplier="1:1.2" id="rGU-a4-RGJ"/>
                                         </constraints>
@@ -120,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="jVY-N7-diO" id="VAp-Mx-97g"/>
+                        <outlet property="facebookButton" destination="Wk1-wM-1Qh" id="0as-49-b8e"/>
                         <outlet property="loginButton" destination="g2h-lQ-Ayj" id="abK-VH-qud"/>
                         <outlet property="passwordField" destination="VBj-xV-Ryn" id="Yrc-Vt-Eo8"/>
                     </connections>
@@ -147,10 +155,10 @@
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-Fi-Xri">
-                                                <rect key="frame" x="34.5" y="178" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="178" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="DhP-Hp-7lJ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="DhP-Hp-7lJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="continue"/>
@@ -164,10 +172,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Second Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yyq-8f-WmJ">
-                                                <rect key="frame" x="34.5" y="240" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="228" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="fyi-e7-owA"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fyi-e7-owA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="continue"/>
@@ -181,10 +189,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-87-o2E">
-                                                <rect key="frame" x="34.5" y="302" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="278" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="Vvh-6W-sef"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Vvh-6W-sef"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="continue"/>
@@ -198,10 +206,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFz-PZ-vga">
-                                                <rect key="frame" x="34.5" y="426" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="378" width="345" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="zAP-R5-K08"/>
+                                                    <constraint firstAttribute="height" constant="40" id="zAP-R5-K08"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,10 +225,10 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-Ue-GpH">
-                                                <rect key="frame" x="34.5" y="364" width="345" height="52"/>
+                                                <rect key="frame" x="34.5" y="328" width="345" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="q2T-9q-Qc2"/>
+                                                    <constraint firstAttribute="height" constant="40" id="q2T-9q-Qc2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="email"/>

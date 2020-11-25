@@ -28,6 +28,7 @@
 		F79E71EC256CE129005EF62B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E71EB256CE129005EF62B /* Login.storyboard */; };
 		F79E7208256D482C005EF62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F79E7207256D482C005EF62B /* GoogleService-Info.plist */; };
 		F79E720D256DFAAA005EF62B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E720C256DFAA9005EF62B /* DatabaseManager.swift */; };
+		F79E7212256E268A005EF62B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7211256E268A005EF62B /* ProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F79E71EB256CE129005EF62B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F79E7207256D482C005EF62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F79E720C256DFAA9005EF62B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		F79E7211256E268A005EF62B /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				F79E71D4256CD8F8005EF62B /* VideoViewerViewController.swift */,
 				F79E71C2256CD8A6005EF62B /* NewConversationViewController.swift */,
 				F79E71C7256CD8B9005EF62B /* ProfileViewController.swift */,
+				F79E7211256E268A005EF62B /* ProfileCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				F79E71BE256CCA3A005EF62B /* RegisterViewController.swift in Sources */,
 				F79E71B6256CCA29005EF62B /* LoginViewController.swift in Sources */,
 				F79E71C8256CD8B9005EF62B /* ProfileViewController.swift in Sources */,
+				F79E7212256E268A005EF62B /* ProfileCell.swift in Sources */,
 				F79E717D256CC818005EF62B /* Messenger.xcdatamodeld in Sources */,
 				F79E71CD256CD8D8005EF62B /* PhotoViewerViewController.swift in Sources */,
 			);
