@@ -29,6 +29,9 @@
 		F79E7208256D482C005EF62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F79E7207256D482C005EF62B /* GoogleService-Info.plist */; };
 		F79E720D256DFAAA005EF62B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E720C256DFAA9005EF62B /* DatabaseManager.swift */; };
 		F79E7212256E268A005EF62B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7211256E268A005EF62B /* ProfileCell.swift */; };
+		F79E7268256F7FF1005EF62B /* ConversationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7267256F7FF1005EF62B /* ConversationsCell.swift */; };
+		F79E7278256F8262005EF62B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7277256F8262005EF62B /* ChatViewController.swift */; };
+		F79E7283256F9435005EF62B /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7282256F9434005EF62B /* NewConversationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		F79E7207256D482C005EF62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F79E720C256DFAA9005EF62B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F79E7211256E268A005EF62B /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		F79E7267256F7FF1005EF62B /* ConversationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsCell.swift; sourceTree = "<group>"; };
+		F79E7277256F8262005EF62B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F79E7282256F9434005EF62B /* NewConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,10 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				F79E7176256CC818005EF62B /* ConversationsViewController.swift */,
+				F79E7267256F7FF1005EF62B /* ConversationsCell.swift */,
+				F79E7277256F8262005EF62B /* ChatViewController.swift */,
+				F79E71C2256CD8A6005EF62B /* NewConversationViewController.swift */,
+				F79E7282256F9434005EF62B /* NewConversationCell.swift */,
 				F79E71DF256CDA40005EF62B /* Login */,
 				F79E71CC256CD8D8005EF62B /* PhotoViewerViewController.swift */,
 				F79E71D4256CD8F8005EF62B /* VideoViewerViewController.swift */,
-				F79E71C2256CD8A6005EF62B /* NewConversationViewController.swift */,
 				F79E71C7256CD8B9005EF62B /* ProfileViewController.swift */,
 				F79E7211256E268A005EF62B /* ProfileCell.swift */,
 			);
@@ -534,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F79E7177256CC818005EF62B /* ConversationsViewController.swift in Sources */,
+				F79E7283256F9435005EF62B /* NewConversationCell.swift in Sources */,
 				F79E720D256DFAAA005EF62B /* DatabaseManager.swift in Sources */,
 				F79E71C3256CD8A6005EF62B /* NewConversationViewController.swift in Sources */,
 				F79E71D5256CD8F8005EF62B /* VideoViewerViewController.swift in Sources */,
@@ -543,6 +553,8 @@
 				F79E71B6256CCA29005EF62B /* LoginViewController.swift in Sources */,
 				F79E71C8256CD8B9005EF62B /* ProfileViewController.swift in Sources */,
 				F79E7212256E268A005EF62B /* ProfileCell.swift in Sources */,
+				F79E7278256F8262005EF62B /* ChatViewController.swift in Sources */,
+				F79E7268256F7FF1005EF62B /* ConversationsCell.swift in Sources */,
 				F79E717D256CC818005EF62B /* Messenger.xcdatamodeld in Sources */,
 				F79E71CD256CD8D8005EF62B /* PhotoViewerViewController.swift in Sources */,
 			);
