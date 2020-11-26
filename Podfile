@@ -16,6 +16,12 @@ target 'Messenger' do
 # Google
   pod 'GoogleSignIn'
 
+# Messenger
+  pod 'MessageKit'
+  pod 'JGProgressHUD'
+  pod 'RealmSwift'
+  pod 'SDWebImage'
+
   target 'MessengerTests' do
     inherit! :search_paths
     # Pods for testing
