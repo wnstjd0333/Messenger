@@ -8,16 +8,27 @@
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
+    
+    private var loginObserver: NSObjectProtocol?
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var facebookButton: FBLoginButton!
+    @IBOutlet weak var googleButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginObserver = NotificationCenter.default.addObserver(forName: Notification.Name("didLogInNotification"),
+                                               object: nil,
+                                               queue: .main) { [weak self] _ in
+            self?.navigationController?.dismiss(animated: true, completion: nil)
+        }
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
 
         title = "Log in"
         view.backgroundColor = .white
@@ -28,12 +39,11 @@ class LoginViewController: UIViewController {
         facebookButton.delegate = self
         facebookButton.permissions = ["email,public_profile"]
     }
-
-    private func setTextField(textField: UITextField) {
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
-        textField.leftViewMode = .always
-        textField.delegate = self
+    
+    deinit {
+        if let observer = loginObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -82,6 +92,13 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Dismiss",
                                       style: .cancel, handler: nil))
         present(alert, animated: true)
+    }
+    
+    private func setTextField(textField: UITextField) {
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        textField.leftViewMode = .always
+        textField.delegate = self
     }
 }
 

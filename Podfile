@@ -13,6 +13,9 @@ target 'Messenger' do
 # FaceBook
   pod 'FBSDKLoginKit'
 
+# Google
+  pod 'GoogleSignIn'
+
   target 'MessengerTests' do
     inherit! :search_paths
     # Pods for testing
