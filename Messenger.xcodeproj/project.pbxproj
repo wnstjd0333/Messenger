@@ -32,6 +32,7 @@
 		F79E7268256F7FF1005EF62B /* ConversationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7267256F7FF1005EF62B /* ConversationsCell.swift */; };
 		F79E7278256F8262005EF62B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7277256F8262005EF62B /* ChatViewController.swift */; };
 		F79E7283256F9435005EF62B /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E7282256F9434005EF62B /* NewConversationCell.swift */; };
+		F79E72AE256FF349005EF62B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72AD256FF349005EF62B /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F79E7267256F7FF1005EF62B /* ConversationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsCell.swift; sourceTree = "<group>"; };
 		F79E7277256F8262005EF62B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F79E7282256F9434005EF62B /* NewConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
+		F79E72AD256FF349005EF62B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				F79E7172256CC818005EF62B /* AppDelegate.swift */,
 				F79E7174256CC818005EF62B /* SceneDelegate.swift */,
 				F79E720C256DFAA9005EF62B /* DatabaseManager.swift */,
+				F79E72AD256FF349005EF62B /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				F79E7268256F7FF1005EF62B /* ConversationsCell.swift in Sources */,
 				F79E717D256CC818005EF62B /* Messenger.xcdatamodeld in Sources */,
 				F79E71CD256CD8D8005EF62B /* PhotoViewerViewController.swift in Sources */,
+				F79E72AE256FF349005EF62B /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

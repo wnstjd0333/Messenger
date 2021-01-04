@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController {
 
     private let spinner = JGProgressHUD(style: .dark)
     
-    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -33,10 +33,10 @@ class RegisterViewController: UIViewController {
         
         let gesture = UITapGestureRecognizer(target: self,
                                              action: #selector(didTapChangeProfilePic))
-        logoImageView.addGestureRecognizer(gesture)
-        logoImageView.layer.masksToBounds = true
-        logoImageView.layer.borderWidth = 2
-        logoImageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.addGestureRecognizer(gesture)
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     @objc private func didTapChangeProfilePic() {
@@ -52,7 +52,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        logoImageView.layer.cornerRadius = logoImageView.frame.size.width * 0.5
+        imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
 
     }
     
@@ -95,9 +95,28 @@ class RegisterViewController: UIViewController {
                     return
                 }
                 
-                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
-                                                                    lastName: lastName,
-                                                                    emailAddress: email))
+                let chatUser = ChatAppUser(firstName: firstName,
+                                           lastName: lastName,
+                                           emailAddress: email)
+                
+                DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+                    if success {
+                        guard let image = self?.imageView.image,
+                              let data = image.pngData() else {
+                            return
+                        }
+                        let fileName = chatUser.profilePictureFileName
+                        StorageManager.shared.uploadProfilePicture(with: data, fileName: fileName) { (result) in
+                            switch result {
+                            case .success(let downloadUrl):
+                                UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                print(downloadUrl)
+                            case .failure(let error):
+                                print("Stroage mannager error: \(error)")
+                            }
+                        }
+                    }
+                })
                 
                 self?.navigationController?.dismiss(animated: true, completion: nil)
             }
@@ -170,7 +189,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
             return
         }
-        self.logoImageView.image = selectedImage
+        self.imageView.image = selectedImage
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

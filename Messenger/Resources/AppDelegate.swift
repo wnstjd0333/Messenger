@@ -109,11 +109,40 @@ extension AppDelegate: GIDSignInDelegate {
             return
         }
         
+        UserDefaults.standard.set(email, forKey: "email")
+        
         DatabaseManager.shared.userExists(with: email) { (exists) in
             if !exists {
-                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
-                                                                    lastName: lastName,
-                                                                    emailAddress: email))
+                
+                let chatUser = ChatAppUser(firstName: firstName,
+                                           lastName: lastName,
+                                           emailAddress: email)
+                
+                DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+                    if success {
+                        if user.profile.hasImage {
+                            guard let url = user.profile.imageURL(withDimension: 200) else {
+                                return
+                            }
+                            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                                guard let data = data else {
+                                    return
+                                }
+                                
+                                let fileName = chatUser.profilePictureFileName
+                                StorageManager.shared.uploadProfilePicture(with: data, fileName: fileName) { (result) in
+                                    switch result {
+                                    case .success(let downloadUrl):
+                                        UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                        print(downloadUrl)
+                                    case .failure(let error):
+                                        print("Stroage mannager error: \(error)")
+                                    }
+                                }
+                            }.resume()
+                        }
+                    }
+                })
             }
         }
         

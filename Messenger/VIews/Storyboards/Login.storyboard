@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm4-uA-xkL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="26"/>
+            <point key="canvasLocation" x="157" y="25"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="QcR-RQ-xmt">
@@ -305,8 +305,8 @@
                     <connections>
                         <outlet property="emailField" destination="8WE-87-o2E" id="JnO-by-3H2"/>
                         <outlet property="firstNameField" destination="Ofh-Fi-Xri" id="Sqn-cn-TEx"/>
+                        <outlet property="imageView" destination="JM3-7D-Fg8" id="0FI-bs-WY3"/>
                         <outlet property="lastNameField" destination="Yyq-8f-WmJ" id="Xwz-gb-Uh6"/>
-                        <outlet property="logoImageView" destination="JM3-7D-Fg8" id="0FI-bs-WY3"/>
                         <outlet property="passwordField" destination="jfk-Ue-GpH" id="o0y-f8-5K2"/>
                         <outlet property="registerButton" destination="ZFz-PZ-vga" id="qbh-Df-Ez3"/>
                     </connections>
