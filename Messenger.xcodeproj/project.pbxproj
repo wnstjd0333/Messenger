@@ -170,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				F79E71AB256CC927005EF62B /* Resources */,
-				F79E71AA256CC925005EF62B /* ViewModels */,
-				F79E71AC256CC97A005EF62B /* Models */,
 				F79E71A9256CC924005EF62B /* VIews */,
 				F79E71A8256CC922005EF62B /* Controllers */,
 				F79E7183256CC81B005EF62B /* Info.plist */,
@@ -225,13 +223,6 @@
 			path = VIews;
 			sourceTree = "<group>";
 		};
-		F79E71AA256CC925005EF62B /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		F79E71AB256CC927005EF62B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,13 +232,6 @@
 				F79E72AD256FF349005EF62B /* StorageManager.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F79E71AC256CC97A005EF62B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F79E71AD256CC992005EF62B /* Storyboards */ = {
