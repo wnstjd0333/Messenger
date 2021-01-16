@@ -10,7 +10,7 @@ import FirebaseAuth
 import JGProgressHUD
 
 class ConversationsViewController: UIViewController {
-
+    
     private let spinner = JGProgressHUD(style: .dark)
     
     @IBOutlet weak var tableView: UITableView!
@@ -32,7 +32,22 @@ class ConversationsViewController: UIViewController {
     @objc private func didTapComposeButton() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NewConversationVC") as! NewConversationViewController
+        vc.completion = { [weak self] result in
+            print("\(result)")
+            self?.createNewConversation(result: result)
+        }
         present(vc, animated: true)
+    }
+    
+    private func createNewConversation(result: [String: String]) {
+        guard let name = result["name"], let email = result["email"] else {
+            return
+        }
+        let vc = ChatViewController(with: email)
+        vc.isNewConversation = true
+        vc.title = name
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func validateAuth() {
@@ -69,7 +84,7 @@ extension ConversationsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = ChatViewController()
+        let vc = ChatViewController(with: "aaa")
         vc.title = "Junseong"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
